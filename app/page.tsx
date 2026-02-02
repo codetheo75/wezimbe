@@ -3,7 +3,6 @@
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { createClient } from '@/lib/supabase/client'
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
 export default function Home() {
@@ -44,19 +43,17 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/auth/sign-up">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-slate-100">
-                Get Started
-              </Button>
+            <Link
+              href="/auth/sign-up"
+              className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-slate-100 transition"
+            >
+              Get Started
             </Link>
-            <Link href="/auth/login">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-blue-700"
-              >
-                Sign In
-              </Button>
+            <Link
+              href="/auth/login"
+              className="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+            >
+              Sign In
             </Link>
           </div>
 
