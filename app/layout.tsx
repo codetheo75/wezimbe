@@ -13,8 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wezimbe",
-  description: "Welcome to your Next.js project",
+  title: "Wezimbe - Group Savings Platform",
+  description: "Save together with friends and family. Create, manage, and track group and personal savings goals with Wezimbe.",
+  keywords: "savings, group savings, financial goals, collaborative saving",
+  openGraph: {
+    title: "Wezimbe - Group Savings Platform",
+    description: "Save together with friends and family. Create, manage, and track group and personal savings goals.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -25,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans bg-slate-50`}
       >
         {children}
       </body>
